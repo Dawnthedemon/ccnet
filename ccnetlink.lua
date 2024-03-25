@@ -1,0 +1,1 @@
+-- this connects the cc computer (if it has a modem) to ccnet
