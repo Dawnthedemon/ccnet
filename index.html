@@ -1,1 +1,81 @@
-<header>hello world!</header>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+window.onload = function() {
+  var titleText = "Welcome to Project Phoenix ";
+
+  function scrollTitle() {
+    titleText = titleText.substring(1) + titleText.substring(0, 1);
+    document.title = titleText;
+    setTimeout(scrollTitle, 200);
+  }
+
+  scrollTitle();
+};
+</script>
+</head>
+<body>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background-color: orange;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 0;
+}
+
+.content {
+  margin-left: 200px;
+  transition: margin-left 0.3s;
+}
+
+.content.collapsed {
+  margin-left: 0;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <button onclick="toggleSidebar()">Toggle Sidebar</button>
+  <ul>
+    <li><a href="https://phoenix-nms.pattontorbett1.repl.co">Home</a></li>
+    <li><a href="https://phoenix-nms.pattontorbett1.repl.co/About.html">About</a></li>
+    <li><a href="https://phoenix-nms.pattontorbett1.repl.co/Contact.html">Contact</a></li>
+    <li><a href="https://phoenix-nms.pattontorbett1.repl.co/Products.html">Products</a></li>
+    <li><a href="https://phoenix-nms.pattontorbett1.repl.co/WIP.html">WIP</a></li>
+    <li><a href="https://forms.gle/3RipcUPeKP6EQf3u6">Signup</a></li>
+  </ul>
+</div>
+
+<div class="content" id="content">
+  <!-- Your main content goes here -->
+</div>
+
+<script>
+function toggleSidebar() {
+  var sidebar = document.getElementById("sidebar");
+  var content = document.getElementById("content");
+  
+  sidebar.classList.toggle("collapsed");
+  content.classList.toggle("collapsed");
+}
+</script>
+
+</body>
+</html>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
